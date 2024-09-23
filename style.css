@@ -45,6 +45,10 @@ img {
 /* Reset and Common Code End  */
 
 /* Navbar Start Here */
+#menu-icon {
+  display: none;
+}
+
 nav {
   font-family: cursive;
   font-size: 1.2rem;
@@ -129,6 +133,16 @@ nav {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
+  }
+  #menu-icon {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
