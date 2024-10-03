@@ -49,6 +49,46 @@ img {
 .btn:hover {
   background-color: var(--secondary-color);
 }
+
+.card {
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  padding: var(--padding);
+}
+
+.card:hover {
+  box-shadow: 0.1rem 0.2rem 0.8rem rgba(205, 202, 202, 1);
+}
+
+.hr-design {
+  margin: 0.5rem 0;
+}
+
+.dot {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.black {
+  background-color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+}
 /* Reset and Common Code End  */
 
 /* Navbar Start Here */
@@ -153,6 +193,226 @@ nav {
 }
 /* Header End Here */
 
+/* Main Start Here */
+
+main {
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.sidebar {
+  flex: 1;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: flex-start;
+}
+
+.main-content {
+  flex: 3;
+  padding: var(--padding);
+}
+
+.actions__sort select {
+  padding: var(--padding);
+}
+
+.actions__search input {
+  padding: var(--padding);
+  width: 15rem;
+}
+
+.actions__search button {
+  margin-left: -0.3rem;
+  border: 1px solid;
+  padding: 0.55rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.product {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: green;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  z-index: 10;
+}
+
+.product__img {
+  width: 100%;
+  filter: saturate(0);
+  transition: var(--transition);
+}
+
+.product__img:hover {
+  filter: saturate(1);
+}
+
+.product__body {
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.learn-more {
+  color: green;
+}
+
+/* Pagination Start */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pg__btn {
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+}
+/* Pagination End */
+/* Main End Here */
+
+/*----------- Cart Page Style Start Here ----------------*/
+.cart {
+  padding: var(--padding);
+  gap: 1rem;
+}
+
+.cart .card {
+  margin-bottom: 1rem;
+}
+
+.cart__items {
+  flex: 1;
+}
+
+.cart__items-action {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__item input {
+  flex: 0.1;
+}
+
+.cart__item-img {
+  flex: 0.2;
+  width: 15rem;
+  height: 10rem;
+}
+
+.cart__item-decription {
+  flex: 0.3;
+}
+
+.cart__item-shipping {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.cart__item-actions {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.cart__payment {
+  flex: 1;
+}
+
+.cart__payment-summary > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.cart__payment-btn {
+  width: 100%;
+}
+
+.cart__payment-method > h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cart__payment-method > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+/*------------ Cart Page Style End Here ---------------- */
+
+/*---------- Register and Login Section Style Start Here -----------*/
+.register,
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  min-height: 60vh;
+}
+
+.register .card,
+.login .card {
+  width: 45rem;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-control label {
+  flex: 0.1;
+  text-align: left;
+}
+.form-control input,
+textarea {
+  flex: 0.9;
+  padding: var(--padding);
+  border: 1px solid;
+}
+
+.form-control textarea {
+  resize: none;
+  height: 12vh;
+}
+
+.form-btn-field {
+  border-radius: var(--border-radius);
+}
+
+.contact-btn {
+  width: 30%;
+}
+/*----------- Register and Login Section Style Ends Here -----------*/
+
 /* Footer Start Here */
 .footer {
   background-color: var(--primary-color);
@@ -194,9 +454,20 @@ nav {
   .header {
     height: 100vh;
   }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .res {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 600px) {
