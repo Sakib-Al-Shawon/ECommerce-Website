@@ -365,7 +365,7 @@ main {
 }
 /*------------ Cart Page Style End Here ---------------- */
 
-/*---------- Register and Login Section Style Start Here -----------*/
+/*---------- Register and Login Page Section Style Start Here -----------*/
 .register,
 .login {
   display: flex;
@@ -411,7 +411,32 @@ textarea {
 .contact-btn {
   width: 30%;
 }
-/*----------- Register and Login Section Style Ends Here -----------*/
+/*-------- Register and Login Page Section Style Ends Here -----------*/
+
+/*----- Profile Page Section Start Here ----------*/
+.profile {
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.profile .card {
+  padding: var(--padding);
+  width: 30rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile__img {
+  width: 20vw;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.profile__buttons button {
+  background-color: transparent;
+}
+
+/*----- Profile Page Section Ends Here ----------*/
 
 /* Footer Start Here */
 .footer {
