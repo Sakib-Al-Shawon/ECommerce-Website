@@ -208,7 +208,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  align-self: flex-start;
 }
 
 .main-content {
@@ -530,9 +529,16 @@ textarea {
     display: flex;
     flex-direction: column;
   }
-}
 
-@media (max-width: 600px) {
+  .flex-center {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 /* RESPONSIVE STYLE END */
