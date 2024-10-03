@@ -438,6 +438,26 @@ textarea {
 
 /*----- Profile Page Section Ends Here ----------*/
 
+/*------- Contact Page Start Here ----------*/
+.contact-section {
+  min-height: 60vh;
+}
+
+.contact-container {
+  margin-top: 5rem;
+}
+
+.contact-address {
+  flex: 1;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.contact__map {
+  width: 80%;
+}
+/*------ Contact Page Ends Here -----------*/
+
 /* Footer Start Here */
 .footer {
   background-color: var(--primary-color);
@@ -482,6 +502,23 @@ textarea {
 
   .products {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .form,
+  .form-control {
+    width: 100%;
+  }
+
+  .form-control input,
+  .textarea {
+    width: 80%;
+  }
+
+  .contact-address {
+    width: 100%;
+  }
+  .register .card,
+  .login .card {
+    width: 90%;
   }
 }
 
